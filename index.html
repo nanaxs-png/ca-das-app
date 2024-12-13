@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios para Adultos Mayores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicios para Adultos Mayores</h1>
+        <p>Selecciona tu nivel y empieza a ejercitarte.</p>
+        
+        <!-- Selección de nivel -->
+        <div id="level-selection" class="level-selection">
+            <h2>Selecciona tu nivel:</h2>
+            <button class="level-btn" onclick="selectLevel('easy')">Bajo</button>
+            <button class="level-btn" onclick="selectLevel('medium')">Medio</button>
+            <button class="level-btn" onclick="selectLevel('hard')">Alto</button>
+        </div>
+        
+        <!-- Lista de ejercicios -->
+        <div id="exercise-list" class="exercise-list" style="display:none;">
+            <h2>Elige tu ejercicio:</h2>
+        </div>
+        
+        <!-- Ejercicio en progreso -->
+        <div id="exercise-in-progress" style="display:none;">
+            <h2 id="current-exercise-title">Ejercicio</h2>
+            <img id="exercise-image" src="" alt="Ejercicio" style="width: 100%; margin-top: 10px;">
+            <p id="exercise-description">Descripción del ejercicio...</p>
+            <p id="exercise-tip" style="font-style: italic; color: #555;">Consejo: Realiza el ejercicio con calma y sin prisa.</p>
+            <p id="timer" class="timer" style="font-size: 24px;">Tiempo: 0:00</p>
+            <button id="start-btn" onclick="startExercise()">Comenzar</button>
+            <button id="next-btn" onclick="nextExercise()" style="display:none;">Siguiente Ejercicio</button>
+        </div>
+        
+        <!-- Descanso -->
+        <div id="rest" style="display:none;">
+            <h2>¡Buen trabajo! Descansa 30 segundos.</h2>
+            <button onclick="startRest()">Descansar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
