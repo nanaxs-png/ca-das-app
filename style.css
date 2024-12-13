@@ -1,100 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    box-sizing: border-box;
 }
 
-.container {
-    background-color: #ffffff;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
-    width: 350px;
 }
 
 h1 {
-    color: #2c3e50;
-    font-size: 24px;
+    font-size: 2.5em;
 }
 
-h2 {
-    color: #16a085;
-    font-size: 20px;
-}
-
-.level-selection {
-    margin: 20px 0;
-}
-
-.level-btn {
-    background-color: #16a085;
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.level-btn:hover {
-    background-color: #1abc9c;
+#level-selection {
+    margin-top: 20px;
+    text-align: center;
 }
 
 button {
-    background-color: #16a085;
+    background-color: #4CAF50;
     color: white;
+    padding: 10px 20px;
+    margin: 10px;
     border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #1abc9c;
+    background-color: #45a049;
 }
 
-#timer {
-    font-size: 24px;
-    margin-top: 10px;
-    color: #2c3e50;
-}
-
-.exercise-list {
-    display: flex;
-    flex-direction: column;
+#exercise-selection, #exercise-timer {
     margin-top: 20px;
-    text-align: left;
+    text-align: center;
 }
 
-.exercise-item {
-    padding: 10px;
-    background-color: #ecf0f1;
-    margin: 5px 0;
-    cursor: pointer;
-    border-radius: 5px;
+#exercise-name {
+    font-size: 1.5em;
+    margin-top: 20px;
 }
 
-.exercise-item:hover {
-    background-color: #bdc3c7;
-}
-
-#exercise-image {
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-#exercise-tip {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #16a085;
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
 }
