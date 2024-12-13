@@ -3,44 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios para Adultos Mayores</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>App de Ejercicio para Adultos Mayores</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Ejercicios para Adultos Mayores</h1>
-        <p>Selecciona tu nivel y empieza a ejercitarte.</p>
-        
-        <!-- Selección de nivel -->
-        <div id="level-selection" class="level-selection">
-            <h2>Selecciona tu nivel:</h2>
-            <button class="level-btn" onclick="selectLevel('easy')">Bajo</button>
-            <button class="level-btn" onclick="selectLevel('medium')">Medio</button>
-            <button class="level-btn" onclick="selectLevel('hard')">Alto</button>
-        </div>
-        
-        <!-- Lista de ejercicios -->
-        <div id="exercise-list" class="exercise-list" style="display:none;">
-            <h2>Elige tu ejercicio:</h2>
-        </div>
-        
-        <!-- Ejercicio en progreso -->
-        <div id="exercise-in-progress" style="display:none;">
-            <h2 id="current-exercise-title">Ejercicio</h2>
-            <img id="exercise-image" src="" alt="Ejercicio" style="width: 100%; margin-top: 10px;">
-            <p id="exercise-description">Descripción del ejercicio...</p>
-            <p id="exercise-tip" style="font-style: italic; color: #555;">Consejo: Realiza el ejercicio con calma y sin prisa.</p>
-            <p id="timer" class="timer" style="font-size: 24px;">Tiempo: 0:00</p>
-            <button id="start-btn" onclick="startExercise()">Comenzar</button>
-            <button id="next-btn" onclick="nextExercise()" style="display:none;">Siguiente Ejercicio</button>
-        </div>
-        
-        <!-- Descanso -->
-        <div id="rest" style="display:none;">
-            <h2>¡Buen trabajo! Descansa 30 segundos.</h2>
-            <button onclick="startRest()">Descansar</button>
-        </div>
-    </div>
+        <p>Elige el nivel de ejercicio que más te convenga y realiza tu rutina de ejercicios.</p>
+    </header>
+
+    <section id="level-selection">
+        <h2>Selecciona tu nivel de ejercicio</h2>
+        <button onclick="selectLevel('easy')">Bajo</button>
+        <button onclick="selectLevel('medium')">Intermedio</button>
+        <button onclick="selectLevel('hard')">Avanzado</button>
+    </section>
+
+    <section id="exercise-selection" style="display: none;">
+        <h2>Selecciona tus ejercicios</h2>
+        <p>Haz una selección de ejercicios según tu nivel.</p>
+        <div id="exercise-list"></div>
+        <button onclick="startRoutine()">Iniciar Rutina</button>
+    </section>
+
+    <section id="exercise-timer" style="display: none;">
+        <h2>Ejercicio en progreso</h2>
+        <p id="exercise-name"></p>
+        <p>Tiempo restante: <span id="timer"></span> segundos</p>
+        <button onclick="completeExercise()">Completar ejercicio</button>
+    </section>
+
+    <footer>
+        <p>Recuerda: Consulta a tu médico antes de iniciar cualquier rutina de ejercicios.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
